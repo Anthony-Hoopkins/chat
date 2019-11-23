@@ -8,9 +8,10 @@ const Message = ({ message }) => (
   <div className={`Message ${message.type === MessageType.Outgoing ? 'right' : ''}`}>
     <p className="Message-text">{message.message}</p>
     <p className="Message-time">{message.date}</p>
-    <div className="Message-status">
+    {message.type === MessageType.Outgoing
+    && <div className="Message-status">
       <MessageStatus status={message.status} />
-    </div>
+    </div>}
   </div>
 );
 

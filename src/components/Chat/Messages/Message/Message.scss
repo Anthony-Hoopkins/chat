@@ -1,12 +1,22 @@
 .Message {
   padding: 10px 20px;
-  border: 1px solid gray;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   margin-bottom: 10px;
   display: flex;
   align-items: flex-end;
+  font-size: 14px;
 
   &.right {
     margin-left: auto;
+  }
+
+  &-text {
+    margin-right: 10px;
+  }
+
+  &-time {
+    margin-right: 10px;
+    color: #888;
   }
 }
