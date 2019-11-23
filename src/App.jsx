@@ -5,7 +5,7 @@ import Chat from './components/Chat/Chat';
 import AuthService from './services/auth-service';
 
 const App = () => {
-  AuthService.getToken();
+  const auth = new AuthService();
 
   return (<div className="App">
       <div className="App-container">
