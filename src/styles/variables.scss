@@ -4,10 +4,12 @@ body {
   --color-border: #ddd;
   --color-primary: #9bbff2;
   --color-background: white;
+  --color-prev-text: #6f6f6f;
 
   &.dark-theme {
     --color-background: #292929;
     --color-border: #555;
     --color-text: white;
+    --color-prev-text: #B9B9B9;
   }
 }
