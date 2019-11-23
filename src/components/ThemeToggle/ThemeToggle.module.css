@@ -1,0 +1,22 @@
+.toggle {
+  width: 35px;
+  height: 22px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.switcher {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+  background-color: var(--color-primary);
+
+  transition: left .15s ease-in-out;
+}
+
+.switcher.active {
+  left: 15px;
+}

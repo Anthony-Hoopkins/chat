@@ -1,5 +1,13 @@
-html {
+body {
   --color-text: #333;
+  --color-text-lighter: #888;
   --color-border: #ddd;
   --color-primary: #9bbff2;
+  --color-background: white;
+
+  &.dark-theme {
+    --color-background: #292929;
+    --color-border: #555;
+    --color-text: white;
+  }
 }
