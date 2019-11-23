@@ -1,0 +1,12 @@
+.Message {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-end;
+
+  &.right {
+    margin-left: auto;
+  }
+}
