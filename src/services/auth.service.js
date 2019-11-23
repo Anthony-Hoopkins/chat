@@ -8,31 +8,22 @@ export default class AuthService {
     return instance.post(API.GET_AUTH_TOKEN);
   }
 
-  token = null;
+  token;
 
   constructor() {
     this.setAuthToken();
   }
 
+  getAuthToken() {
+    return this.token;
+  }
+
   setAuthToken() {
-    return AuthService.requestAccessToken()
+    AuthService.requestAccessToken()
       .then(({ data: token }) => {
         this.token = token;
         console.log('Token has received: ' + token);
       });
   }
 
-  getMessagesList() {
-
-  }
-
-  getConversation() {
-
-  }
-
-  sendMessage() {
-
-  }
-
-  // TODO delete, edit message
 }
