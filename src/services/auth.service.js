@@ -3,14 +3,12 @@ import { API } from '../constants';
 
 
 export default class AuthService {
-
   static requestAccessToken() {
     return instance.post(API.GET_AUTH_TOKEN);
   }
 
-  token;
-
   constructor() {
+    this.token = '';
     this.setAuthToken();
   }
 
@@ -22,7 +20,7 @@ export default class AuthService {
     AuthService.requestAccessToken()
       .then(({ data: token }) => {
         this.token = token;
-        console.log('Token has received: ' + token);
+        console.log(`Token has received: ${token}`);
       });
   }
 
