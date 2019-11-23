@@ -1,0 +1,12 @@
+.MessageStatus {
+  &-icon {
+    &.notActive {
+      background-color: lightgray;
+    }
+
+    &:nth-of-type(2) {
+      position: relative;
+      left: -10px;
+    }
+  }
+}
