@@ -2,12 +2,12 @@ import React from 'react';
 import './App.scss';
 import ChatList from './components/ChatLIst/ChatList';
 import Chat from './components/Chat/Chat';
-import AuthService from './services/auth.service';
-import MessageService from './services/message.service';
+import messagesService from './services/message.service';
+
 
 const App = () => {
-  const auth = new AuthService();
-  const message = new MessageService();
+
+  messagesService.getConversationsList();
 
   return (<div className="App">
       <div className="App-container">

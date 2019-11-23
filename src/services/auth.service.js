@@ -1,10 +1,10 @@
 import instance from './instance';
-import { API } from '../constants';
+import { AUTH_API } from '../constants';
 
 
-export default class AuthService {
+class AuthService {
   static requestAccessToken() {
-    return instance.post(API.GET_AUTH_TOKEN);
+    return instance.post(AUTH_API.GET_AUTH_TOKEN);
   }
 
   constructor() {
@@ -21,7 +21,11 @@ export default class AuthService {
       .then(({ data: token }) => {
         this.token = token;
         console.log(`Token has received: ${token}`);
+
       });
   }
 
 }
+
+const authService = new AuthService();
+export default authService;
